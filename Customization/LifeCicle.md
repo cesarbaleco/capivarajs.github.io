@@ -5,33 +5,42 @@ O CapivaraJS possui funções que trabalham com o ciclo de vida de uma página `
 Esse é o estado que será executado apenas quando o controlador do componente for criado, não é possível executar essa ação mais de uma vez com o mesmo componente.
 
 ```js
-class simpleComponent{
-    $onInit(){
-    	console.log('Controller started!');
+const {Component, Controller} = capivara.core
+
+@Component({
+	tag: 'my-component',
+    template: `<p> Olá Mundo </p>`
+})
+
+class myClass extends Controller {
+
+	$onInit(){
+  	    console.log('Controller Started!')
     }
 }
-
-capivara.component('simple-component', { 
-    template: '<h1>Hello</h1>',
-    controller: simpleComponent
-});
 ```
+O exemplo está disponível no [JSFiddle](http://jsfiddle.net/zde5kbjt/11/)
 
 ## $onViewInit
 Ações definidas no escopo do `onViewInit` serão executados quando o componente for renderizado na tela, na maioria dos casos, existe uma diferença de tempo de execução das funções do `onViewInit`, visto que os componentes levam um certo tempo para serem visíveis.
 
 ```js
-class simpleComponent{
-    $onInit(){
-    	console.log('Rendered view!');
+const {Component, Controller, OnViewInit} = capivara.core
+
+@Component({
+	tag: 'my-component',
+    template: `<p> Olá Mundo </p>`
+})
+
+class myClass extends Controller {
+
+	$OnViewInit(){
+  	    console.log('Controller Started!')
     }
 }
-
-capivara.component('simple-component', { 
-    template: '<h1>Hello</h1>',
-    controller: simpleComponent
-});
 ```
+O exemplo está disponível no [JSFiddle](http://jsfiddle.net/zde5kbjt/12/)
+
 
 ## $onChanges
 
