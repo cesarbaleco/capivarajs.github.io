@@ -1,6 +1,6 @@
 ![logo](media/capivara-logo.png)
 
-<p style="font-size: 2.5rem"><span style="color: #00A998;">**Capivara**</span><span style="color: #007A7F;">**JS**</span> <small>3.5.0</small></p>
+<p style="font-size: 2.5rem"><span style="color: #00A998;">**Capivara**</span><span style="color: #007A7F;">**JS**</span> <small>3.9.1</small></p>
 
 > Um novo jeito de criar componentes híbridos.
 
