@@ -3,14 +3,14 @@
 A criação de componentes utilizando CapivaraJS é feita de maneira simples, mais a frente serão apresentados maiores detalhes sobre os objetos de configuração que o Framework disponibiliza. O exemplo abaixo mostra como devemos criar um componente com conteúdo `HTML`.
 
 ```js
-const {Component, Controller} = capivara.core;
+const {Component, Controller, OnInit} = capivara.core;
 
 @Component({
 	tag: 'my-component',
-  template: `<p>Olá Mundo</p>` 
+    template: `<p>Olá Mundo</p>` 
 })
 
-class myClass extends Controller {
+class myClass extends Controller implements OnInit {
 	$onInit(){
     }
 }
@@ -23,7 +23,7 @@ Depois da criação do componente basta apenas chama-lo dentro do seu código `H
 <my-component></my-component>
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/266/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/310/)
 
 ## Objeto de Configuração
 
@@ -51,7 +51,7 @@ Essa propriedade é responsável por conter todo código `HTML` presente no seu 
         <p>Essa é uma demostração do template.</p>`
 })
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/269/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/311/)
 
 
 ## Controller
@@ -59,14 +59,14 @@ Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/
 Através dessa propriedade é possível receber o escopo do seu componente, todas as variáveis, funções serão definidas dentro do `Controller`, ele é o cérebro do seu componente. A sua `class` fará um `extends` do `Controller`, portanto, para adicionar as funcionalidades ao seu componente, ele deve ser chamado da seguinte forma.
 
 ```js
-const {Component, Controller} = capivara.core
+const {Component, Controller, OnInit} = capivara.core
 
 @Component({
 	tag: 'my-component',
     template: `<p>Hello [[ $ctrl.message ]]!</p>`
 })
 
-class myClass extends Controller {
+class myClass extends Controller implements OnInit{
 
 	$onInit(){
         this.message = 'World';
@@ -75,7 +75,7 @@ class myClass extends Controller {
 ``` 
 !>Importante destacar que as variáveis quando referenciarem o `controller` devem possuir o prefixo **$ctrl**.
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/271/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/312/)
 
 # Interpolação
 
@@ -112,7 +112,7 @@ As constantes são parâmetros que você informa para um componente, o valor do 
 Para demonstrar melhor o funcionamento do parâmetro, criaremos uma constante que terá o nome de **myName**, e gostaríamos que esse valor não fosse alterado.
 
 ```js
-const {Component, Controller} = capivara.core
+const {Component, Controller, OnInit} = capivara.core
 
 @Component({
     tag: 'my-component',
@@ -120,7 +120,7 @@ const {Component, Controller} = capivara.core
     constants: ['myName']
 })
 
-class myClass extends Controller {
+class myClass extends Controller implements OnInit{
 
     $onInit(){
   	    console.log(this.$constants.myName)
@@ -135,7 +135,7 @@ Logo em seguida precisamos informar o valor da constante no `HTML`, note que os 
 ```
 Pronto, sua constante foi passada para o componente, toda constante está disponível na propriedade **$constants** do seu **$ctrl**.
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/281/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/313/)
 
 # Funções
 
@@ -146,7 +146,7 @@ const {Component} = capivara.core
 
 @Component({
 	tag: 'my-component',
-  template: `
+    template: `
   	<button cp-click="$ctrl.$functions.onButtonClick()"> Clique aqui! </button>
   `,
   functions: ['onButtonClick']
@@ -165,7 +165,7 @@ Na declaração do componente bastariamos passar a função por parâmetro, obse
 <my-component on-button-click="$ctrl.createAlertTest"></my-component>
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/x3myhc85/16/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/x3myhc85/17/)
 
 # Bindings
 Bindings são parâmetros informados à um componente, são utilizados quando quiser que o componente **mantenha a referência** do parâmetro, ou seja, toda alteração de valor feita pelo componente será refletido no contexto do parâmetro, assim como toda alteração feita no valor do parâmetro será refletida no componente.
@@ -177,8 +177,8 @@ const {Component, Controller} = capivara.core
 
 @Component({
 	tag: 'my-component',
-  tempalte: `<input type="text" cp-model="$ctrl.$bindings.name">`,
-  bindings: ['name']
+    tempalte: `<input type="text" cp-model="$ctrl.$bindings.name">`,
+    bindings: ['name']
 })
 
 class NotMyController {
@@ -196,4 +196,4 @@ Quando chamar o componente no código `HTML`, apenas será necessário informar 
 <my-component name="$ctrl.person.name"></my-component>
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/28/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/314/)

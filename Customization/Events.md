@@ -24,6 +24,8 @@ capivara.$on('SimpleEvent', ( parameter ) => {
 });
 ```
 
+Um exemplo contendo os dois eventos está disponível no [JSFiddle]()
+
 !> Observe que o nome dos eventos tanto no **$emit** quanto no **$on** possuem o mesmo nome, é através desse parâmetro que os eventos sabem quem são os emissores e quem são os receptores.
 
 !> Importante ressaltar que as funções de **$on** quando colocadas dentro de uma classe, devem ser envelopadas por outra função, na maioria dos casos podemos colocar as chamadas do **$on** dentro do `constructor` da classe.
