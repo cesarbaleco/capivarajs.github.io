@@ -1,9 +1,10 @@
 ## Utilização
 
 ```js
-capivara.component('simple-component', {
-    template: '<img cp-attr.src="">'
-});
+@Component({
+  tag: 'simple-component',
+  template: `<img cp-attr.src="">` 
+})
 ```
 
 ## Descrição
@@ -34,54 +35,65 @@ A chamada HTML de todos os componentes é feita da seguinte forma:
 Exemplo de utilização do atributo `max`.
 
 ```js
-class simpleComponent {
-  constructor() {
-    this.maxRange = 20;
+const { Component, Controller, OnInit } = capivara.core;
+
+@Component({
+	tag: 'simple-component',
+  template: `
+        <input type="range" cp-model="$ctrl.value" cp-attr.max="$ctrl.maxRange">
+        <p>Value: [[$ctrl.value]]</p>`
+})
+
+class MyComponent extends Controller implements OnInit {
+	
+  $onInit() {
+  	this.value = 0
   }
 }
-
-capivara.component('simple-component', {
-  template: `
-   <input type="range" cp-model="$ctrl.value" cp-attr.max="$ctrl.maxRange">
-  `,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/77/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/320/)
 
 Exemplo de utilização do atributo `placeholder`
 
 ```js
-class simpleComponent {
-  constructor() {
-    this.placeHolder = 'Type some Text here...';
-  }
-}
+const { Component, Controller, OnInit } = capivara.core;
 
-capivara.component('simple-component', {
+@Component({
+	tag: 'simple-component',
   template: `
-   <input type="text" cp-attr.placeholder="$ctrl.placeHolder">
-  `,
-  controller: simpleComponent
-});
+		<input type="text" cp-attr.placeholder="$ctrl.placeHolder">`
+})
+
+class MyComponent extends Controller implements OnInit {
+	
+  $onInit() {
+  	this.placeHolder = 'Type some Text here...';
+  }
+  
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/76/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/323/)
 
 Exemplo de utilização do atributo `title`
 
 ```js
-class simpleComponent {
-  constructor() {
-    this.WHO = 'World Health Organization';
+const { Component, Controller, OnInit } = capivara.core;
+
+@Component({
+	tag: 'simple-component',
+  template: `
+		<p>
+    	<abbr cp-attr.title="$ctrl.WHO">WHO</abbr>
+      was founded in 1948.
+		</p>`
+})
+
+class MyComponent extends Controller implements OnInit {
+	
+  $onInit() {
+  	 this.WHO = 'World Health Organization';
   }
 }
-
-capivara.component('simple-component', {
-  template: `
-    <p><abbr cp-attr.title="$ctrl.WHO">WHO</abbr> was founded in 1948.</p>
-  `,
-  controller: simpleComponent
-});
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/50/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/326/)

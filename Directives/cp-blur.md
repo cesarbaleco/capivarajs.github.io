@@ -1,9 +1,10 @@
 ## Utilização
 
 ```js
-capivara.component('simple-component', {
-    template: `<input type="text" cp-blur="">`,
-});
+@Component({
+  tag: 'simple-component',
+  template: `<input type="text" cp-blur="">`
+})
 ```
 
 ## Descrição
@@ -21,15 +22,18 @@ A chamada HTML do componente é feita da seguinte forma:
 Exemplo de utilização do atributo `blur`.
 
 ```js
-class simpleComponent {
+const { Component, Controller } = capivara.core;
+
+@Component({
+	tag: 'simple-component',
+  template: `<input type="text" cp-blur="$ctrl.onBlur()"">`,
+})
+
+class MyComponent extends Controller {
+	
   onBlur() {
     alert('Blur input.');
   }
 }
-
-capivara.component('simple-component', {
-  template: `<input type="text" cp-blur="$ctrl.onBlur()"">`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/53/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/331/)

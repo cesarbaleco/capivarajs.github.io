@@ -1,9 +1,10 @@
 ## Utilização
 
 ```js
-capivara.component('simple-component', {
+@Component({
+  tag: 'simple-component',
   template: `<button cp-click=""></button>`,
-});
+})
 ```
 
 ## Descrição
