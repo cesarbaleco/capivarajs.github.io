@@ -1,9 +1,10 @@
 ## Utilização
 
 ```js
-capivara.component('simple-component', {
+@Component({
+  tag: 'simple-component'
   template: `<button cp-dblclick=""></button>`,
-});
+})
 ```
 
 ## Descrição
@@ -21,39 +22,45 @@ A chamada HTML de todos os componentes é feita da seguinte forma:
 Exemplo de utilização em um elemento `<button>`
 
 ```js
-class simpleComponent {
+const {Component, Controller} = capivara.core
+
+@Component( {
+  tag: 'simple-component',
+  template: `
+    <button cp-dblclick="$ctrl.dblclickFunction()">
+        Double Click me
+    </button>`
+})
+
+class simpleComponent extends Controller {
   dblclickFunction() {
-    alert('Double Click Fired');
+    alert('Double click Fired');
   }
 }
-
-capivara.component('simple-component', {
-  template: `<button cp-dblclick="$ctrl.dblclickFunction()">Double Click me</button>`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/106/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/351/)
 
 Exemplo de utilização da mesma função em mais de um elemento
 
 ```js
-class simpleComponent {
-  dblclickFunction() {
-    alert('Double Click Fired');
-  }
-}
+const {Component, Controller} = capivara.core
 
-capivara.component('simple-component', {
+@Component( {
+  tag: 'simple-component',
   template: `
-    <button cp-dblclick="$ctrl.dblclickFunction()">
-        Double Click me
+  	<button cp-dblclick="$ctrl.dblclickFunction()">
+        Click me
     </button>
     <p>Some random Text</p>
     <button cp-dblclick="$ctrl.dblclickFunction()">
-        Double Click me Too
-    </button>
-    `,
-  controller: simpleComponent
-});
+        Click me Too
+    </button>`
+})
+
+class simpleComponent extends Controller {
+  dblclickFunction() {
+    alert('Hello World');
+  }
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/57/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/352/)

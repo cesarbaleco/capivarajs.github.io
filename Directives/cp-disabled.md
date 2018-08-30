@@ -1,8 +1,9 @@
 ## Utilização
 
 ```js
-capivara.component('simple-component', {
-  template: `<button cp-disabled=""></button>`,
+@Component({
+  tag: 'simple-component'
+  template: `<button cp-disabled=""></button>`
 });
 ```
 
@@ -23,38 +24,43 @@ A chamada HTML de todos os componentes é feita da seguinte forma:
 Exemplo de utilização em um elemento `<button>` com valor direto.
 
 ```js
-class simpleComponent {
-  constructor() {
+const {Component, Controller, OnInit} = capivara.core
+
+@Component( {
+  tag: 'simple-component',
+  template: `<button cp-disabled="$ctrl.isDisabled">Click me</button>`
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
     this.isDisabled = true;
   }
 }
-
-capivara.component('simple-component', {
-  template: `<button cp-disabled="$ctrl.isDisabled">Click me</button>`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/85/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/364/)
 
 Exemplo de utilização em um elemento `<button>` com operação lógica.
 
 ```js
-class simpleComponent {
-  constructor() {
-    this.person = {
+const {Component, Controller, OnInit} = capivara.core
+
+@Component( {
+  tag: 'simple-component',
+  template: `
+  	<input type="text" cp-model="$ctrl.person.name">
+    <button cp-disabled="$ctrl.person.name.length < 5">
+        Click me
+    </button>
+  `
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
+     this.person = {
         name: ''
     }
   }
 }
-
-capivara.component('simple-component', {
-  template: `
-    <input type="text" cp-model="$ctrl.person.name">
-    <button cp-disabled="$ctrl.person.name.length > 5">
-        Click me
-    </button>`,
-  controller: simpleComponent
-});
 ```
 
 Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/58/)

@@ -1,10 +1,11 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
+@Component({
+    tag: 'simple-component',
     template: `
         <h1 cp-if=""></h1>
         <h1 cp-else-if=""></h1>`
-});
+})
 ```
 ## Descrição
 
@@ -19,39 +20,43 @@ O `cp-else-if` deve ser utilizado logo após a diretiva `cp-if`, ela é visível
 Exemplo de utilização de valor direto.
 
 ```js
-class simpleComponent {
-    constructor(){
-        this.showText = false;
-    }
-}
+const {Component, Controller, OnInit} = capivara.core
 
-capivara.component('simple-component', {
+@Component( {
+  tag: 'simple-component',
   template: `
-	<h1 cp-if="$ctrl.showText">A simple text</h1>
+    <h1 cp-if="$ctrl.showText">A simple text</h1>
     <h1 cp-else-if="!$ctrl.showText">Other simple text</h1>
-  `,
-  controller: simpleComponent
-});
+  `
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
+    this.showText = false
+  }
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/108/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/367/)
 
 Exemplo de utilização de operações lógicas.
 
 ```js
-class simpleComponent {
-    constructor(){
-        this.firstValue = 10;
-        this.secondValue = 20;
-    }
-}
+const {Component, Controller, OnInit} = capivara.core
 
-capivara.component('simple-component', {
+@Component( {
+  tag: 'simple-component',
   template: `
-	<h1 cp-if="$ctrl.firstValue > $ctrl.secondValue">A simple text</h1>
+    <h1 cp-if="$ctrl.firstValue > $ctrl.secondValue">A simple text</h1>
     <h1 cp-else-if="$ctrl.firstValue < $ctrl.secondValue">Other simple text</h1>
-  `,
-  controller: simpleComponent
-});
+  `
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
+    this.firstValue = 10
+    this.secondValue = 20
+  }
+}
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/60/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/369/)

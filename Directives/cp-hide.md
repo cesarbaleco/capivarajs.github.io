@@ -1,8 +1,9 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
-    template: `<div cp-hide=""></div>`,
-});
+@Component({
+    tag: 'simple-component',
+    template: `<div cp-hide=""></div>`
+})
 ```
 ## Descrição
 
@@ -18,18 +19,20 @@ A diretiva `cp-hide` faz com que seja possível ocultar dinamicamente elementos 
 Exemplo de utilização do `cp-hide` utilizando comparações.
 
 ```js
-class simpleComponent {
-    constructor(){
-        this.color = '';
-    }
-}
+const {Component, Controller, OnInit} = capivara.core
 
-capivara.component('simple-component', {
+@Component({
+  tag: 'simple-component',
   template: `
-    <p>Type <b>red<b> to hide the div</p>
-		<input type="text" cp-model="$ctrl.color">
-		<div cp-hide="$ctrl.color == 'red'"> Hi </div>`,
-  controller: simpleComponent
-});
+    <p>Type <b>red</b> to hide the div</p>
+    <input type="text" cp-model="$ctrl.color">
+    <div cp-hide="$ctrl.color == 'red'"> Hi </div>`
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
+    this.color = '';
+  }
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/69/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/384/)

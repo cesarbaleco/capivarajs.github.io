@@ -1,8 +1,9 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
+@Component({
+    tag: 'simple-component',
     template: `<h1 cp-if=""></h1>`
-});
+})
 ```
 ## Descrição
 
@@ -19,41 +20,42 @@ O `cp-if` possibilita mostrar ou ocultar elementos de acordo com uma condição 
 Exemplo de utilização de valor direto.
 
 ```js
-class simpleComponent {
-    constructor(){
-        this.showText = false;
-    }
+const {Component, Controller, OnInit} = capivara.core
 
-    change() {
-        this.showText = !this.showText;
-    }
-}
-
-capivara.component('simple-component', {
+@Component( {
+  tag: 'simple-component',
   template: `
-	<h1 cp-if="$ctrl.showText">A simple text</h1>
-	<button cp-click="$ctrl.change()">Click me</button>
-  `,
-  controller: simpleComponent
-});
+    <h1 cp-if="$ctrl.showText">A simple text</h1>
+    <button cp-click="$ctrl.change()">Click me</button>
+  `
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
+    this.showText = false
+  }
+  change() {
+    this.showText = !this.showText;
+  }
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/107/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/387/)
 
 Exemplo de utilização de operações lógicas.
 
 ```js
-class simpleComponent {
-    constructor(){
-        this.firstValue = 10;
-        this.secondValue = 20;
-    }
-}
+const {Component, Controller, OnInit} = capivara.core
 
-capivara.component('simple-component', {
-  template: `
-	<h1 cp-if="$ctrl.firstValue <= $ctrl.secondValue">A simple text</h1>
-  `,
-  controller: simpleComponent
-});
+@Component( {
+  tag: 'simple-component',
+  template: `<h1 cp-if="$ctrl.firstValue <= $ctrl.secondValue">A simple text</h1>`
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
+    this.firstValue = 10
+    this.secondValue = 20
+  }
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/87/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/389/)
