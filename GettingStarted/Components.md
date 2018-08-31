@@ -39,6 +39,8 @@ Quando declaramos um componente, é possível adicionar várias configurações,
     controller: FUNCTION
 })
 ```
+Vale lembrar que o objeto de configuração `tag` é a Tag HTML que o componente irá substituir.
+
 ## Template
 
 Essa propriedade é responsável por conter todo código `HTML` presente no seu componente, é ela que será substituída no lugar da chamada do componente, não existe tamanho definido em questão de elementos `HTML` que ela suporta, apenas ressaltar que para facilitar a escrita do código, sempre que um componente possui mais de uma linha, utilizar ao invés de `aspas simples` para demarcar o código, deve ser utilizado `Crase`.
@@ -66,8 +68,7 @@ const {Component, Controller, OnInit} = capivara.core
     template: `<p>Hello [[ $ctrl.message ]]!</p>`
 })
 
-class myClass extends Controller implements OnInit{
-
+class myClass extends Controller implements OnInit {
 	$onInit(){
         this.message = 'World';
     }
@@ -84,27 +85,27 @@ A interpolação é usada pelo CapivaraJS para fornecer vinculação de dados pa
 Para compreendermos a interpolação, vamos criar um componente **counter** que a cada 1 segundo vai aumentar o valor e o capivarajs terá que automaticamente atualizar os elementos **HTML**.
 
 ```js
-class MyController {
-    constructor() {
-        this.value = 0;
-        setInterval(() => {
-            this.value++;
-        }, 1000);
-    }
-}
+const { Component, Controller } = capivara.core;
 
-capivara.component('counter', {
-	template: `
-        <h1>
-            Counter: [[ $ctrl.value ]]
-        </h1>
-  `,
-  controller: MyController
-});
+@Component({
+    tag: 'my-component',
+    template: ` <h1> [[ $ctrl.counter ]] </h1> `
+})
+class MyComponent extends Controller {
+	
+  private counter: number = 1;
+  
+  $onInit() {
+  	const self = this;
+    setInterval(() => {
+      self.counter++;
+    }, 1000);
+  }  
+}
 ```
 !> Sempre que quisermos utilizar a interpolação para representação de valores, ela deve aparecer entre **colchetes duplos**.
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/46/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/1kbLruyq/172/)
 
 # Constants
 As constantes são parâmetros que você informa para um componente, o valor do parâmetro é lido apenas uma vez, então toda alteração do valor não será refletida no componente, ou seja, todos os parâmetros passados como `constants` para o componente **não mantêm a referência**.
@@ -120,8 +121,7 @@ const {Component, Controller, OnInit} = capivara.core
     constants: ['myName']
 })
 
-class myClass extends Controller implements OnInit{
-
+class myClass extends Controller implements OnInit {
     $onInit(){
   	    console.log(this.$constants.myName)
     }
@@ -153,7 +153,6 @@ const {Component} = capivara.core
 })
 
 class NotMyController {
-
     createAlertTest() {
         alert('Clicou');
     }
@@ -173,21 +172,25 @@ Bindings são parâmetros informados à um componente, são utilizados quando qu
 Para entendermos como funciona os bindings do componente, vamos criar um exemplo onde iremos simular um objeto chamado `person` e nosso componente irá alterar o parâmetro `name`.
 
 ```js
-const {Component, Controller} = capivara.core
+const { Component, Controller } = capivara.core;
 
 @Component({
-	tag: 'my-component',
-    tempalte: `<input type="text" cp-model="$ctrl.$bindings.name">`,
-    bindings: ['name']
+    tag: 'my-component',
+    bindings: ['name'],
+    template: ` <input type="text" cp-model="$ctrl.$bindings.name"/> `
 })
 
-class NotMyController {
+class MyComponent extends Controller {
+}
+
+class MyController {
   constructor() {
     this.person = {
       name: "Mateus Miranda"
     }
   }
 }
+capivara.controller(document.body, MyController);
 ``` 
 Quando chamar o componente no código `HTML`, apenas será necessário informar a referência do atributo.
 
@@ -196,4 +199,4 @@ Quando chamar o componente no código `HTML`, apenas será necessário informar 
 <my-component name="$ctrl.person.name"></my-component>
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/314/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/1kbLruyq/175/)

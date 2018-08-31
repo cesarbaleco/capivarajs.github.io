@@ -38,14 +38,13 @@ Exemplo de utilização do atributo `max`.
 const { Component, Controller, OnInit } = capivara.core;
 
 @Component({
-	tag: 'simple-component',
+  tag: 'simple-component',
   template: `
         <input type="range" cp-model="$ctrl.value" cp-attr.max="$ctrl.maxRange">
         <p>Value: [[$ctrl.value]]</p>`
 })
 
 class MyComponent extends Controller implements OnInit {
-	
   $onInit() {
   	this.value = 0
   }
@@ -59,17 +58,15 @@ Exemplo de utilização do atributo `placeholder`
 const { Component, Controller, OnInit } = capivara.core;
 
 @Component({
-	tag: 'simple-component',
+  tag: 'simple-component',
   template: `
-		<input type="text" cp-attr.placeholder="$ctrl.placeHolder">`
+    <input type="text" cp-attr.placeholder="$ctrl.placeHolder">`
 })
 
 class MyComponent extends Controller implements OnInit {
-	
   $onInit() {
   	this.placeHolder = 'Type some Text here...';
   }
-  
 }
 ```
 Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/323/)
@@ -80,7 +77,7 @@ Exemplo de utilização do atributo `title`
 const { Component, Controller, OnInit } = capivara.core;
 
 @Component({
-	tag: 'simple-component',
+  tag: 'simple-component',
   template: `
 		<p>
     	<abbr cp-attr.title="$ctrl.WHO">WHO</abbr>
@@ -89,7 +86,6 @@ const { Component, Controller, OnInit } = capivara.core;
 })
 
 class MyComponent extends Controller implements OnInit {
-	
   $onInit() {
   	 this.WHO = 'World Health Organization';
   }

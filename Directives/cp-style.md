@@ -1,8 +1,9 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
+@Component({
+    tag: 'simple-component',
     template: `<h1 cp-style="{CSSAttribute: }"></h1>`
-});
+})
 ```
 ## Descrição
 
@@ -18,38 +19,41 @@ A diretiva possui superte a múltiplos atributos, basta apenas utilizar vírgula
 Exemplo de utilização com valor direto.
 
 ```js
-class simpleComponent {
-  constructor() {
+const {Component, Controller, OnInit} = capivara.core
+
+@Component({
+  tag: 'simple-component',
+  template: `
+   <p cp-style="{color: $ctrl.color}">Example</p>
+  `
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
     this.color = 'blue';
   }
 }
-
-capivara.component('simple-component', {
-  template: `
-   <p cp-style="{background: $ctrl.color}">Example</p>
-  `,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/110/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/418/)
 
 Exemplo de utilização com comparação.
 
 ```js
-class simpleComponent {
-  constructor() {
+const {Component, Controller, OnInit} = capivara.core
+
+@Component({
+  tag: 'simple-component', 
+  template: `
+   <h1 cp-style="{color: $ctrl.firstValue == 70 ? 'red' : 'green'}"> 
+     [[ $ctrl.firstValue + $ctrl.secondValue ]] 
+   </h1>`
+})
+
+class simpleComponent extends Controller implements OnInit{
+  $onInit() {
     this.firstValue = 50;
     this.secondValue = 80;
   }
 }
-
-capivara.component('simple-component', {
-  template: `
-   <h1 cp-style="{color: $ctrl.firstValue == 70 ? 'red' : 'green'}"> 
-     [[ $ctrl.firstValue + $ctrl.secondValue ]] 
-   </h1>
-  `,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/74/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/421/)

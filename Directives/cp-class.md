@@ -31,7 +31,6 @@ const { Component, Controller, OnInit } = capivara.core;
 })
 
 class MyComponent extends Controller implements OnInit {
-	
   $onInit() {
   	this.visible = true
   }
@@ -53,7 +52,6 @@ const { Component, Controller, OnInit } = capivara.core;
 })
 
 class MyComponent extends Controller implements OnInit {
-
   $onInit() {
     this.firstValue = 10;
     this.secondValue = 90;
@@ -76,7 +74,6 @@ const { Component, Controller, OnInit } = capivara.core;
 })
 
 class MyComponent extends Controller implements OnInit {
-
   $onInit() {
     this.firstValue = 10;
     this.secondValue = 90;

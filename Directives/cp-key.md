@@ -1,11 +1,12 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
+@Component({
+    tag: 'simple-component',
     template: `
         <h1 cp-keypress=""></h1>
         <h1 cp-keyup=""></h1>
         <h1 cp-keydown=""></h1>`
-});
+})
 ```
 ## Descrição
 
@@ -35,7 +36,17 @@ A diretiva tem suporte a múltiplas teclas, basta apenas continuar a concatenaç
 Exemplo de utilização da diretiva `cp-keypress` e `key-up`.
 
 ```js
-class simpleComponent {
+const {Component, Controller} = capivara.core
+
+@Component({
+	tag: 'simple-component',
+  template: `
+   <input cp-keypress.enter="$ctrl.onPressEnter($event)" placeholder="Press Enter">
+   <input cp-keyup.u="$ctrl.onUp($event)" placeholder="Press and Release U">
+`
+})
+
+class simpleComponent extends Controller {
   onPressEnter(evt) {
     alert('onPressEnter.');
   }
@@ -43,13 +54,5 @@ class simpleComponent {
     alert('onUpEnter.');
   }
 }
-
-capivara.component('simple-component', {
-  template: `
-   <input cp-keypress.enter="$ctrl.onPressEnter($event)" placeholder="Press Enter">
-   <input cp-keyup.u="$ctrl.onUp($event)" placeholder="Press and Release U">
-`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/98/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/398/)

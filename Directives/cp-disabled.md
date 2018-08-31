@@ -56,9 +56,7 @@ const {Component, Controller, OnInit} = capivara.core
 
 class simpleComponent extends Controller implements OnInit {
   $onInit() {
-     this.person = {
-        name: ''
-    }
+     this.person = { name: '' }
   }
 }
 ```

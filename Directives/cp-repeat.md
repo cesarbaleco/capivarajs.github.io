@@ -1,7 +1,8 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
-    template: `<li cp-repeat=""></li>`,
+@Component({
+    tag: 'simple-component',
+    template: `<li cp-repeat=""></li>`
 });
 ```
 ## Descrição
@@ -17,8 +18,20 @@ Podemos usar a diretiva `cp-repeat` para renderizar uma lista de itens. A direti
 Exemplo de utilização do `cp-repeat`.
 
 ```js
-class simpleComponent {
-  constructor() {
+const {Component, Controller, OnInit} = capivara.core
+
+@Component({
+  tag: 'simple-component', 
+  template: `
+   <ul>
+     <li cp-repeat="person in $ctrl.persons">
+      [[person.name]]
+     </li>
+   </ul>`
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
     this.persons = [
       {name: 'João'},
       {name: 'Maria'},
@@ -27,16 +40,5 @@ class simpleComponent {
     ];
   }
 }
-
-capivara.component('simple-component', {
-  template: `
-   <ul>
-     <li cp-repeat="person in $ctrl.persons">
-      [[person.name]]
-     </li>
-   </ul>
-  `,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/100/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/410/)

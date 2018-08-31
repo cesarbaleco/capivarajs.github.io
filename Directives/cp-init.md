@@ -1,8 +1,9 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
+@Component({
+    tag: 'simple-component',
     template: `<h1 cp-init=""></h1>`
-});
+})
 ```
 ## Descrição
 
@@ -17,16 +18,21 @@ A diretiva `cp-init` permite a execução de uma função quando o elemento que 
 Exemplo de utilização da diretiva `cp-init`.
 
 ```js
-class simpleComponent {
-  initialization() {
-    console.log('Hello World!');
+const { Component, Controller, OnInit } = capivara.core;
+
+@Component({
+	tag: 'my-component',
+  template: ` <h1 cp-init="$ctrl.onMessageInit()"> [[ $ctrl.message ]] </h1> `
+})
+
+class MyComponent extends Controller implements OnInit {
+  public message: string = 'Start message';
+  
+  $onInit() { }
+  onMessageInit() {
+  	console.log('teste');
   }
 }
-
-capivara.component('simple-component', {
-  template: `<h1 cp-init="$ctrl.initialization()">Hello World</h1>`,
-  controller: simpleComponent
-});
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/94/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/1kbLruyq/160/)

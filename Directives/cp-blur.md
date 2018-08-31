@@ -25,12 +25,11 @@ Exemplo de utilização do atributo `blur`.
 const { Component, Controller } = capivara.core;
 
 @Component({
-	tag: 'simple-component',
+  tag: 'simple-component',
   template: `<input type="text" cp-blur="$ctrl.onBlur()"">`,
 })
 
 class MyComponent extends Controller {
-	
   onBlur() {
     alert('Blur input.');
   }

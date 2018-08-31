@@ -1,7 +1,8 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
-    template: ` <input cp-model=""/>`,
+@Component({
+    tag: 'simple-component',
+    template: `<input cp-model=""/>`,
 });
 ```
 ## Descrição
@@ -17,20 +18,20 @@ A diretiva `cp-model` possibilita a interação do seu escopo com um elemento `<
 Exemplo de utilização do `cp-model`.
 
 ```js
-class simpleComponent {
-    constructor(){
-        this.person = {
-            name: ''
-        }
-    }
-}
+const {Component, Controller, OnInit} = capivara.core
 
-capivara.component('simple-component', {
+@Component({
+  tag: 'simple-component', 
   template: `
     <p>Choose a name</p>
-	<input type="text" cp-model="$ctrl.person.name">
-	<p> Your name: [[$ctrl.person.name]] </p>`,
-  controller: simpleComponent
-});
+    <input type="text" cp-model="$ctrl.person.name">
+    <p> Your name: [[$ctrl.person.name]] </p>`
+})
+
+class simpleComponent extends Controller implements OnInit {
+    $onInit(){
+        this.person = { name: '' }
+    }
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/109/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/402/)
