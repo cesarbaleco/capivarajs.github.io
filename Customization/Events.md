@@ -47,12 +47,12 @@ class onClass extends Controller implements OnInit{
 
 @Component({
 	tag: 'emit-component',
-    template: `<button cp-click="$ctrl.emitMessage()">Click Here</button>`
+    	template: `<button cp-click="$ctrl.emitMessage()">Click Here</button>`
 })
 
 class emitClass extends Controller {
 	emitMessage() {
-  	Capivara.$emit('ReciveMessage', 'John')
-  }
+  		Capivara.$emit('ReciveMessage', 'John')
+  	}
 }
 ```
