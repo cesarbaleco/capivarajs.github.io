@@ -69,27 +69,35 @@ class myClass extends Controller implements OnChanges, OnInit {
 ```
 O exemplo está disponível no [JSFiddle](http://jsfiddle.net/jcanabarro/zde5kbjt/50/).
 
-## $destroy
+## $onDestroy
 
 A função é encarregada de executar todas as ações de seu escopo assim que o componente for destruído.
 
 ```js
-const {Component, Controller, OnDestroy} = capivara.core
+const { Component, Controller, OnDestroy } = capivara.core;
 
 @Component({
-	tag: 'my-component',
-    template: `<h1>Olá Mundo</h1>`,
-
+    tag: 'my-component',
+    template: `<h1>[[ $ctrl.message ]]</h1>`
 })
+class MyComponent extends Controller implements OnDestroy {
+    private message: string = 'My Component';
 
-class myClass extends Controller implements OnDestroy {
-	
-  $onDestroy(){
-  	console.log("Component Destroyed!")
-  }
+    $onDestroy() {
+        alert('My Component Destroyed');
+    }
 }
+
+class MyController {
+    private showComponent: boolean = true;
+  
+    toogleComponent() {
+        this.showComponent = !this.showComponent;
+    }
+}
+capivara.controller(document.body, MyController);
 ```
 
-O exemplo está disponível no [JSFiddle](http://jsfiddle.net/zde5kbjt/31/).
+O exemplo está disponível no [JSFiddle](https://jsfiddle.net/mateusmiranda/1kbLruyq/184/).
 
 !> É importante ressaltar que essas funções precisam acompanhar o prefixo **$** antes de seus nomes, para que o CapivaraJS possa identificar que são funções especiais.
