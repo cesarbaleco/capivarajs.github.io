@@ -26,6 +26,7 @@ Depois da criação do componente basta apenas chama-lo dentro do seu código `H
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/310/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/8/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/269/)
 
 ## Objeto de Configuração
 
@@ -58,6 +59,7 @@ Essa propriedade é responsável por conter todo código `HTML` presente no seu 
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/311/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/10/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/272/)
 
 ## Controller
 
@@ -82,6 +84,7 @@ class myClass extends Controller implements OnInit {
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/312/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/11/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/275/)
 
 
 # Interpolação
@@ -114,7 +117,7 @@ class MyComponent extends Controller {
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/1kbLruyq/172/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/12/)
-
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/274/)
 
 # Constants
 As constantes são parâmetros que você informa para um componente, o valor do parâmetro é lido apenas uma vez, então toda alteração do valor não será refletida no componente, ou seja, todos os parâmetros passados como `constants` para o componente **não mantêm a referência**.
@@ -147,6 +150,7 @@ Pronto, sua constante foi passada para o componente, toda constante está dispon
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/313/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/13/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/276/)
 
 # Funções
 
@@ -177,7 +181,7 @@ Na declaração do componente bastariamos passar a função por parâmetro, obse
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/x3myhc85/17/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/16/)
-
+* [React](http://jsfiddle.net/mateusmiranda/td4v7qqd/299/)
 
 # Bindings
 Bindings são parâmetros informados à um componente, são utilizados quando quiser que o componente **mantenha a referência** do parâmetro, ou seja, toda alteração de valor feita pelo componente será refletido no contexto do parâmetro, assim como toda alteração feita no valor do parâmetro será refletida no componente.
@@ -215,3 +219,4 @@ Quando chamar o componente no código `HTML`, apenas será necessário informar 
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/1kbLruyq/175/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/18/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/280/)

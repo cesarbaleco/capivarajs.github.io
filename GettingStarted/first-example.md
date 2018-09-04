@@ -40,8 +40,7 @@ O código HTML abaixo demonstra como deverá ser feita a chamada do componente d
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/zde5kbjt/42/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/2/)
-* [React]()
-* [Angular]()
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/261/)
 
 !> É importante ressaltar que não precisamos fazer qualquer chamada ou construção do componente,
 apenas lembre de adicionar um `script` que chama o arquivo que possui o código `JavaScript` escrito
@@ -79,9 +78,7 @@ dentro dos componentes do CapivaraJS, as variáveis devem **sempre** conter o pr
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/zde5kbjt/43/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/6/)
-* [React]()
-* [Angular]()
-
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/267/)
 
 !> Vale lembrar que o código HTML fica exatamente o mesmo do exemplo anterior.
 
@@ -123,8 +120,7 @@ O que podemos observar com este exemplo:
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/zde5kbjt/41/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/7/)
-* [React]()
-* [Angular]()
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/271/)
 
 !> Vale lembrar que o código HTML fica exatamente o mesmo do exemplo anterior.
 
