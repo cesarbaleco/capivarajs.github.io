@@ -1,8 +1,9 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
-    template: `<input cp-focus="">`,
-});
+@Component({
+    tag: 'simple-component',
+    template: `<input cp-focus="">`
+})
 ```
 ## Descrição
 
@@ -18,15 +19,17 @@ A diretiva `cp-focus` fará com que seja possível executar funções ou ações
 Exemplo de utilização do `cp-focus` para execução de uma função.
 
 ```js
-class simpleComponent {
+const {Component, Controller} = capivara.core
+
+@Component({
+  tag: 'simple-component',
+  template: `<input type="text" placeholder="Click Here" cp-focus="$ctrl.onFocus()">`
+})
+
+class simpleComponent extends Controller {
   onFocus() {
     console.log('Focused');
   }
 }
-
-capivara.component('simple-component', {
-  template: `<input type="text" placeholder="Click Here" cp-focus="$ctrl.onFocus()">`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/67/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/385/)

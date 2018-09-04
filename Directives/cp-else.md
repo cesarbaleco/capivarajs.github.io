@@ -1,10 +1,11 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
+@Component({
+    tag: 'simple-component',
     template: `
         <h1 cp-if=""></h1>
         <h1 cp-else></h1>`
-});
+})
 ```
 ## Descrição
 
@@ -19,40 +20,44 @@ O `cp-else` deve ser utilizado logo após a diretiva `cp-if` ou `cp-else-if`, el
 Exemplo de utilização junto com `cp-if`.
 
 ```js
-class simpleComponent {
-    constructor(){
-        this.showText = false;
-    }
-}
+const {Component, Controller, OnInit} = capivara.core
 
-capivara.component('simple-component', {
+@Component( {
+  tag: 'simple-component',
   template: `
-	<h1 cp-if="$ctrl.showText">A simple text</h1>
+    <h1 cp-if="$ctrl.showText">A simple text</h1>
     <h1 cp-else>Other simple text</h1>
-  `,
-  controller: simpleComponent
-});
+  `
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
+    this.showText = false
+  }
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/92/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/371/)
 
 Exemplo de utilização junto com `cp-if` e `cp-else-if`.
 
 ```js
-class simpleComponent {
-    constructor(){
-        this.firstValue = 10;
-        this.secondValue = 20;
-    }
-}
+const {Component, Controller, OnInit} = capivara.core
 
-capivara.component('simple-component', {
+@Component( {
+  tag: 'simple-component',
   template: `
-	<h1 cp-if="$ctrl.firstValue > $ctrl.secondValue">A simple text</h1>
+    <h1 cp-if="$ctrl.firstValue > $ctrl.secondValue">A simple text</h1>
     <h1 cp-else-if="$ctrl.firstValue === $ctrl.secondValue">Other simple text</h1>
     <h1 cp-else>Last condition</h1>
-  `,
-  controller: simpleComponent
-});
+  `
+})
+
+class simpleComponent extends Controller implements OnInit {
+  $onInit() {
+    this.firstValue = 10;
+    this.secondValue = 20;
+  }
+}
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/91/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/376/)

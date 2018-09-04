@@ -1,9 +1,10 @@
 ## Utilização
 
 ```js
-capivara.component('simple-component', {
+@Component({
+  tag: 'simple-component',
   template: `<button cp-click=""></button>`,
-});
+})
 ```
 
 ## Descrição
@@ -22,39 +23,42 @@ A chamada HTML de todos os componentes é feita da seguinte forma:
 Exemplo de utilização em um elemento `<button>`
 
 ```js
-class simpleComponent {
+const {Component, Controller} = capivara.core
+
+@Component( {
+  tag: 'simple-component',
+  template: `<button cp-click="$ctrl.clickFunction()">Click me</button>`
+})
+
+class simpleComponent extends Controller {
   clickFunction() {
     alert('Hello World');
   }
 }
-
-capivara.component('simple-component', {
-  template: `<button cp-click="$ctrl.clickFunction()">Click me</button>`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/105/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/346/)
 
 Exemplo de utilização da mesma função em mais de um elemento
 
 ```js
-class simpleComponent {
-  clickFunction() {
-    alert('Hello World');
-  }
-}
+const {Component, Controller} = capivara.core
 
-capivara.component('simple-component', {
+@Component( {
+  tag: 'simple-component',
   template: `
-    <button cp-click="$ctrl.clickFunction()">
+  	<button cp-click="$ctrl.clickFunction()">
         Click me
     </button>
     <p>Some random Text</p>
     <button cp-click="$ctrl.clickFunction()">
         Click me Too
-    </button>
-    `,
-  controller: simpleComponent
-});
+    </button>`
+})
+
+class simpleComponent extends Controller {
+  clickFunction() {
+    alert('Hello World');
+  }
+}
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/54/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/347/)

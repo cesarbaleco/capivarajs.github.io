@@ -6,32 +6,37 @@ Vamos aprender alguns exemplos básicos de como criar e configurar seus primeiro
 para que isso te ajude lá na frente, para simplificar algumas coisas, vamos criar pequenos componentes da forma mais simples mesmo, sem a utilização do CLI.
 
 ```js
-class FirstExample{
-  constructor(){
-    console.log("Olá Mundo");
-   }
+const {Component, Controller, OnInit} = capivara.core;
+
+@Component({
+  tag: 'simple-component',
+  template: '<p>Olá Mundo</p>'
+})
+
+class FirstExample extends Controller implements OnInit {
+
+  $onInit() {
+      console.log('Olá Mundo')
+  }
 }
-capivara.component('simple-component', {
-  template: `<p>Olá Mundo!</p>`,
-  controller: FirstExample,
-});
 ```
 
 Vamos observar alguns pontos importantes dentro desse código em `JavaScript`:
 
-* `simple-component`: Tag HTML que chamará o componente que acabou de ser criado.
+* `tag`: Dentro dela deverá ter o nome da Tag HTML que o seu componente possui, no nosso caso `simple-component`.
 * `template`: Aqui dentro estará todo código HTML que seu componente possui.
-* `controller`: É o responsável por chamar todas as variáveis e funções existentes na `classe`.
 
-Questões mais aprofundadas sobre cada elemento dentro do `capivara-component` podem ser encontrados
-aqui.
+Questões mais aprofundadas sobre cada elemento dentro do `@Component` podem ser encontrados
+[aqui](GettingStarted/Components).
 
+O código HTML abaixo demonstra como deverá ser feita a chamada do componente dentro do HTML.
 
 ```html
 <body>
   <simple-component></simple-component>
 </body>
 ```
+O exemplo está disponivel no [JSFiddle](http://jsfiddle.net/zde5kbjt/42/).
 
 !> É importante ressaltar que não precisamos fazer qualquer chamada ou construção do componente,
 apenas lembre de adicionar um `script` que chama o arquivo que possui o código `JavaScript` escrito
@@ -44,15 +49,19 @@ melhorar ele, vamos criar variáveis para serem exibidas na página web ao invé
 
 
 ```js
-class SecondExample{
-  constructor(){
-    this.text = 'Olá Mundo!';
-   }
+const {Component, Controller, OnInit} = capivara.core;
+
+@Component({
+  tag: 'simple-component',
+  template: `<h2> [[ $ctrl.message ]] </h2>`
+})
+
+class SecondExample extends Controller implements OnInit {
+	
+  $onInit() {
+  	this.message = 'Olá Mundo'
+  }
 }
-capivara.component('simple-component', {
-  template: `<p>[[$ctrl.text]]</p>`,
-  controller: SecondExample,
-});
 ```
 
 Alguns pontos que podemos ressaltar nesse código:
@@ -62,40 +71,47 @@ devem estar na seguinte formatação `[[variável]]`.
 * `$ctrl`: Assim como podemos utilizar o parâmetro `this` para referenciar variáveis de uma classe, 
 dentro dos componentes do CapivaraJS, as variáveis devem **sempre** conter o prefixo `$ctrl.variavel`.
 
+O exemplo está disponivel no [JSFiddle](http://jsfiddle.net/zde5kbjt/43/).
+
 !> Vale lembrar que o código HTML fica exatamente o mesmo do exemplo anterior.
 
 ## Utilizando Condicionais
 
-Neste exemplo iremos utilizar condicionais para mostrar texto dentro do HTML de forma dinâmica, alguns pontos serão destacados, mas um aprofundamento sobre todas as diretivas que o CapivaraJS tem suporte pode ser visualizado aqui.
+Neste exemplo iremos utilizar condicionais para mostrar texto dentro do HTML de forma dinâmica, alguns pontos serão destacados, mas um aprofundamento sobre todas as diretivas que o CapivaraJS tem suporte pode ser visualizado [aqui](GettingStarted/Components).
 
 ```js
-class ThirdExample{
-  constructor(){
-    this.text = 'Você está me vendo';
-    this.otherTexto = "Você não está me vendo"
-    this.isVisible = false;
-   }
+const {Component, Controller, OnInit} = capivara.core;
 
-   this.Visibility = function(){
-     this.isVisible = !this.isVisible;
-   }
-}
-capivara.component('simple-component', {
+@Component({
+  tag: 'simple-component',
   template: `
     <p cp-if="$ctrl.isVisible">[[$ctrl.text]]</p>
     <p cp-else>[[$ctrl.otherText]]</p>
     <button cp-click="$ctrl.Visibility()">Click!</button>
-    `,
-  controller: ThirdExample,
-});
+    `
+})
+
+class ThirdExample extends Controller implements OnInit{
+  
+  $onInit(){
+    this.text = 'Você está me vendo';
+    this.otherText = "Você não está me vendo"
+    this.isVisible = true;
+   }
+
+   Visibility = function(){
+     this.isVisible = !this.isVisible;
+   }
+}
 ```
 O que podemos observar com este exemplo:
 
 * `cp-if` e `cp-else`: São condicionais como em qualquer linguagem de programação que exite, através dessas diretivas podemos criar formas dinâmicas de apresentar código HTML.
 * `cp-click`: Sempre utilizado quando se quer disparar eventos utilizando mouse.
-* `$ctrl.Visibility()`: Tome cuidado quando for utilizar funções em diretivas, se elas não possuírem `()` o CapivaraJS entenderá como uma variável.
+* `$ctrl.Visibility()`: **Tome cuidado** quando for utilizar funções em diretivas, se elas não possuírem `()` o CapivaraJS entenderá como uma variável.
 
+O exemplo está disponivel no [JSFiddle](http://jsfiddle.net/zde5kbjt/41/).
 
 !> Vale lembrar que o código HTML fica exatamente o mesmo do exemplo anterior.
 
-Esperamos que isso tenta te dado uma pequena ideia de como o **CapivaraJS** funciona, e se você chegou até aqui, espero que tenha gostado. Nós ficamos muito felizes com isso.
+Esperamos que isso tenta te dado uma pequena ideia de como o **CapivaraJS** funciona, e se você chegou até aqui, espero que tenha gostado. Nós ficamos muito felizes com isso 😃.

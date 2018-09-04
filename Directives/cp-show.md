@@ -1,8 +1,9 @@
 ## Utilização
 ```js
-capivara.component('simple-component', {
+@Component({
+    tag: 'simple-component',
     template: `<h1 cp-show=""></h1>`
-});
+})
 ```
 ## Descrição
 
@@ -18,41 +19,43 @@ Podemos utilizar a diretiva `cp-show` para mostrar ou ocultar elementos de acord
 Exemplo de utilização de valor direto.
 
 ```js
-class simpleComponent {
-    constructor(){
+const {Component, Controller, OnInit} = capivara.core
+
+@Component({
+	tag: 'simple-component', 
+  template: `
+    <h1 cp-show="$ctrl.showText">A simple text</h1>
+    <button cp-click="$ctrl.change()">Click me</button>`
+})
+
+class simpleComponent extends Controller implements OnInit {
+    $onInit(){
         this.showText = false;
     }
-
     change() {
         this.showText = !this.showText;
     }
 }
-
-capivara.component('simple-component', {
-  template: `
-	<h1 cp-show="$ctrl.showText">A simple text</h1>
-	<button cp-click="$ctrl.change()">Click me</button>
-  `,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/101/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/425/)
 
 Exemplo de utilização de operações lógicas.
 
 ```js
-class simpleComponent {
-    constructor(){
+const {Component, Controller, OnInit} = capivara.core
+
+@Component({
+	tag: 'simple-component', 
+  template: `
+	<h1 cp-show="$ctrl.firstValue <= $ctrl.secondValue">A simple text</h1>
+  `
+})
+
+class simpleComponent extends Controller implements OnInit{
+    $onInit(){
         this.firstValue = 10;
         this.secondValue = 20;
     }
 }
-
-capivara.component('simple-component', {
-  template: `
-	<h1 cp-show="$ctrl.firstValue <= $ctrl.secondValue">A simple text</h1>
-  `,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/72/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/415/)

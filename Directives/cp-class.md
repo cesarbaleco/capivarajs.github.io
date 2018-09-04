@@ -1,9 +1,10 @@
 ## Utilização
 
 ```js
-capivara.component('simple-component', {
+@Component({
+  tag: 'simple-component',
   template: ` <p cp-class="{className: }"></p>`,
-});
+})
 ```
 
 ## Descrição
@@ -22,55 +23,61 @@ A chamada HTML de todos os componentes é feita da seguinte forma:
 Exemplo de utilização com variável `bool`
 
 ```js
-class simpleComponent {
-  constructor() {
-    this.visible = true;
+const { Component, Controller, OnInit } = capivara.core;
+
+@Component({
+  tag: 'simple-component',
+  template: ` <p cp-class="{ 'myClass' : $ctrl.visible }">A Simple Example</p>`,
+})
+
+class MyComponent extends Controller implements OnInit {
+  $onInit() {
+  	this.visible = true
   }
 }
-
-capivara.component('simple-component', {
-  template: ` <p cp-class="{ 'myClass' : $ctrl.visible }">A Simple Example</p>`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/84/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/332/)
 
 Exemplo de utilização com condicionais
 
 ```js
-class simpleComponent {
-  constructor() {
+const { Component, Controller, OnInit } = capivara.core;
+
+@Component({
+  tag: 'simple-component',
+  template: `
+      <p cp-class="{ 'myClass' : $ctrl.firstValue === $ctrl.secondValue }">
+        A Simple Example
+      </p>`,
+})
+
+class MyComponent extends Controller implements OnInit {
+  $onInit() {
     this.firstValue = 10;
     this.secondValue = 90;
   }
 }
-
-capivara.component('simple-component', {
-  template: ` 
-        <p cp-class="{ 'myClass' : $ctrl.firstValue === $ctrl.secondValue }">
-            A Simple Example
-        </p>`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/83/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/342/)
 
 Exemplo de utilização com condicionais e operações aritméticas
 
 ```js
-class simpleComponent {
-  constructor() {
+const { Component, Controller, OnInit } = capivara.core;
+
+@Component({
+  tag: 'simple-component',
+  template: `
+    <p cp-class="{ 'myClass' : $ctrl.firstValue + $ctrl.secondValue == 100 }">
+      A Simple Example
+    </p>`,
+})
+
+class MyComponent extends Controller implements OnInit {
+  $onInit() {
     this.firstValue = 10;
     this.secondValue = 90;
   }
 }
-
-capivara.component('simple-component', {
-  template: ` 
-        <p cp-class="{ 'myClass' : $ctrl.firstValue + $ctrl.secondValue == 100 }">
-            A Simple Example
-        </p>`,
-  controller: simpleComponent
-});
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/78/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/343/)
