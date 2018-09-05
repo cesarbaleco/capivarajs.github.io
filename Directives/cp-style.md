@@ -34,7 +34,10 @@ class simpleComponent extends Controller implements OnInit {
   }
 }
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/418/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/418/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/93/)
+* [React]()
 
 Exemplo de utilização com comparação.
 
@@ -56,4 +59,7 @@ class simpleComponent extends Controller implements OnInit{
   }
 }
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/421/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/421/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/94/)
+* [React]()

@@ -36,7 +36,11 @@ class MyComponent extends Controller implements OnInit {
   }
 }
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/332/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/429/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/31/)
+* [React]()
+
 
 Exemplo de utilização com condicionais
 
@@ -58,7 +62,10 @@ class MyComponent extends Controller implements OnInit {
   }
 }
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/342/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/342/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/34/)
+* [React]()
 
 Exemplo de utilização com condicionais e operações aritméticas
 
@@ -80,4 +87,7 @@ class MyComponent extends Controller implements OnInit {
   }
 }
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/343/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/343/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/36/)
+* [React]()

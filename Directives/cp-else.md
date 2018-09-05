@@ -36,7 +36,10 @@ class simpleComponent extends Controller implements OnInit {
   }
 }
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/371/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/371/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/69/)
+* [React]()
 
 Exemplo de utilização junto com `cp-if` e `cp-else-if`.
 
@@ -61,3 +64,8 @@ class simpleComponent extends Controller implements OnInit {
 ```
 
 Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/376/)
+
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/371/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/71/)
+* [React]()

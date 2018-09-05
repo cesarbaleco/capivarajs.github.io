@@ -32,4 +32,7 @@ class simpleComponent extends Controller {
   }
 }
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/385/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/385/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/73/)
+* [React]()
