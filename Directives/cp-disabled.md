@@ -61,4 +61,4 @@ class simpleComponent extends Controller implements OnInit {
 }
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/zf8gqh0d/58/)
+Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/438/)
