@@ -37,4 +37,4 @@ class MyComponent extends Controller implements OnInit {
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/1kbLruyq/160/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/77/)
-* [React]()
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/365/)

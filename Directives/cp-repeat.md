@@ -44,4 +44,4 @@ class simpleComponent extends Controller implements OnInit {
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/410/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/87/)
-* [React]()
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/372/)
