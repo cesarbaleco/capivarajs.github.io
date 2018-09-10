@@ -53,7 +53,7 @@ class MyComponent extends Controller implements OnInit {
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/320/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/22/)
-* [React]()
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/320/)
 
 Exemplo de utilização do atributo `placeholder`
 
@@ -74,8 +74,8 @@ class MyComponent extends Controller implements OnInit {
 ```
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/323/)
-* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/24/)
-* [React]()
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/96/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/323/)
 
 Exemplo de utilização do atributo `title`
 
@@ -100,4 +100,4 @@ class MyComponent extends Controller implements OnInit {
 Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/326/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/28/)
-* [React]()
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/323/)
