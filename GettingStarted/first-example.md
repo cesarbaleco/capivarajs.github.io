@@ -41,6 +41,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/zde5kbjt/42/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/2/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/261/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/84/)
 
 !> É importante ressaltar que não precisamos fazer qualquer chamada ou construção do componente,
 apenas lembre de adicionar um `script` que chama o arquivo que possui o código `JavaScript` escrito
@@ -79,6 +80,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/zde5kbjt/43/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/6/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/267/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/88/)
 
 !> Vale lembrar que o código HTML fica exatamente o mesmo do exemplo anterior.
 
@@ -121,6 +123,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/zde5kbjt/41/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/7/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/271/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/84/)
 
 !> Vale lembrar que o código HTML fica exatamente o mesmo do exemplo anterior.
 

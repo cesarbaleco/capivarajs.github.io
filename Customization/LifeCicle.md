@@ -23,6 +23,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/jcanabarro/zde5kbjt/45/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/100/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/380/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/90/)
 
 ## $onViewInit
 Ações definidas no escopo do `onViewInit` serão executados quando o componente for renderizado na tela, na maioria dos casos, existe uma diferença de tempo de execução das funções do `onViewInit`, visto que os componentes levam um certo tempo para serem visíveis.
@@ -46,7 +47,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/jcanabarro/zde5kbjt/46/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/101/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/382/)
-
+* [Angular](https://jsfiddle.net/t0b8xxfj/92/)
 
 ## $onChanges
 
@@ -77,6 +78,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](http://jsfiddle.net/jcanabarro/zde5kbjt/50/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/102/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/384/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/93/)
 
 
 ## $onDestroy
@@ -111,5 +113,6 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/mateusmiranda/1kbLruyq/184/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/104/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/387/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/95/)
 
 !> É importante ressaltar que essas funções precisam acompanhar o prefixo **$** antes de seus nomes, para que o CapivaraJS possa identificar que são funções especiais.
