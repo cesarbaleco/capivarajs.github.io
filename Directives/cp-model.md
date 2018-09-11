@@ -38,3 +38,4 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/402/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/82/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/369/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/149/)

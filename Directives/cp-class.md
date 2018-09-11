@@ -40,6 +40,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/429/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/31/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/325/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/110/)
 
 
 Exemplo de utilização com condicionais
@@ -66,6 +67,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/342/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/98/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/330/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/113/)
 
 Exemplo de utilização com condicionais e operações aritméticas
 
@@ -91,3 +93,4 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/343/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/36/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/331/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/114/)

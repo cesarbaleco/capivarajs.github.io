@@ -41,6 +41,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/364/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/55/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/340/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/125/)
 
 Exemplo de utilização em um elemento `<button>` com operação lógica.
 
@@ -67,3 +68,4 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/438/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/53/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/342/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/127/)

@@ -59,3 +59,4 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/398/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/79/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/367/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/147/)

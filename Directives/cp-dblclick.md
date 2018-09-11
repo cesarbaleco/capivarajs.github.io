@@ -42,6 +42,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/351/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/44/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/336/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/121/)
 
 
 Exemplo de utilização da mesma função em mais de um elemento
@@ -71,3 +72,4 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/352/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/46/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/338/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/124/)

@@ -40,6 +40,7 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/367/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/67/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/351/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/129/)
 
 
 Exemplo de utilização de operações lógicas.
@@ -66,3 +67,4 @@ Disponibilizamos o exemplo em diferentes ambientes.
 * [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/369/)
 * [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/65/)
 * [React](http://jsfiddle.net/jcanabarro/td4v7qqd/353/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/131/)
