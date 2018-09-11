@@ -21,7 +21,7 @@ Exemplo de utilização da diretiva `cp-init`.
 const { Component, Controller, OnInit } = capivara.core;
 
 @Component({
-	tag: 'my-component',
+	tag: 'simple-component',
   template: ` <h1 cp-init="$ctrl.onMessageInit()"> [[ $ctrl.message ]] </h1> `
 })
 
@@ -34,5 +34,8 @@ class MyComponent extends Controller implements OnInit {
   }
 }
 ```
-
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/1kbLruyq/160/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/1kbLruyq/160/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/77/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/365/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/140/)

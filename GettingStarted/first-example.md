@@ -27,7 +27,7 @@ Vamos observar alguns pontos importantes dentro desse código em `JavaScript`:
 * `template`: Aqui dentro estará todo código HTML que seu componente possui.
 
 Questões mais aprofundadas sobre cada elemento dentro do `@Component` podem ser encontrados
-[aqui](GettingStarted/Components).
+[aqui](GettingStarted/Components)
 
 O código HTML abaixo demonstra como deverá ser feita a chamada do componente dentro do HTML.
 
@@ -36,7 +36,12 @@ O código HTML abaixo demonstra como deverá ser feita a chamada do componente d
   <simple-component></simple-component>
 </body>
 ```
-O exemplo está disponivel no [JSFiddle](http://jsfiddle.net/zde5kbjt/42/).
+
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](http://jsfiddle.net/zde5kbjt/42/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/2/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/261/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/84/)
 
 !> É importante ressaltar que não precisamos fazer qualquer chamada ou construção do componente,
 apenas lembre de adicionar um `script` que chama o arquivo que possui o código `JavaScript` escrito
@@ -71,13 +76,17 @@ devem estar na seguinte formatação `[[variável]]`.
 * `$ctrl`: Assim como podemos utilizar o parâmetro `this` para referenciar variáveis de uma classe, 
 dentro dos componentes do CapivaraJS, as variáveis devem **sempre** conter o prefixo `$ctrl.variavel`.
 
-O exemplo está disponivel no [JSFiddle](http://jsfiddle.net/zde5kbjt/43/).
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](http://jsfiddle.net/zde5kbjt/43/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/6/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/267/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/88/)
 
 !> Vale lembrar que o código HTML fica exatamente o mesmo do exemplo anterior.
 
 ## Utilizando Condicionais
 
-Neste exemplo iremos utilizar condicionais para mostrar texto dentro do HTML de forma dinâmica, alguns pontos serão destacados, mas um aprofundamento sobre todas as diretivas que o CapivaraJS tem suporte pode ser visualizado [aqui](GettingStarted/Components).
+Neste exemplo iremos utilizar condicionais para mostrar texto dentro do HTML de forma dinâmica, alguns pontos serão destacados, mas um aprofundamento sobre todas as diretivas que o CapivaraJS tem suporte pode ser visualizado [aqui](GettingStarted/Components)
 
 ```js
 const {Component, Controller, OnInit} = capivara.core;
@@ -110,7 +119,11 @@ O que podemos observar com este exemplo:
 * `cp-click`: Sempre utilizado quando se quer disparar eventos utilizando mouse.
 * `$ctrl.Visibility()`: **Tome cuidado** quando for utilizar funções em diretivas, se elas não possuírem `()` o CapivaraJS entenderá como uma variável.
 
-O exemplo está disponivel no [JSFiddle](http://jsfiddle.net/zde5kbjt/41/).
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](http://jsfiddle.net/zde5kbjt/41/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/7/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/271/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/84/)
 
 !> Vale lembrar que o código HTML fica exatamente o mesmo do exemplo anterior.
 

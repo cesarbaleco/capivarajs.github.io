@@ -23,7 +23,11 @@ Depois da criação do componente basta apenas chama-lo dentro do seu código `H
 <my-component></my-component>
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/310/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/310/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/8/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/269/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/67/)
 
 ## Objeto de Configuração
 
@@ -53,8 +57,11 @@ Essa propriedade é responsável por conter todo código `HTML` presente no seu 
         <p>Essa é uma demostração do template.</p>`
 })
 ```
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/311/)
-
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/311/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/10/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/272/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/69/)
 
 ## Controller
 
@@ -76,7 +83,11 @@ class myClass extends Controller implements OnInit {
 ``` 
 !>Importante destacar que as variáveis quando referenciarem o `controller` devem possuir o prefixo **$ctrl**.
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/312/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/312/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/11/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/275/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/71/)
 
 # Interpolação
 
@@ -105,7 +116,11 @@ class MyComponent extends Controller {
 ```
 !> Sempre que quisermos utilizar a interpolação para representação de valores, ela deve aparecer entre **colchetes duplos**.
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/1kbLruyq/172/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/1kbLruyq/172/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/12/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/274/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/73/)
 
 # Constants
 As constantes são parâmetros que você informa para um componente, o valor do parâmetro é lido apenas uma vez, então toda alteração do valor não será refletida no componente, ou seja, todos os parâmetros passados como `constants` para o componente **não mantêm a referência**.
@@ -135,7 +150,11 @@ Logo em seguida precisamos informar o valor da constante no `HTML`, note que os 
 ```
 Pronto, sua constante foi passada para o componente, toda constante está disponível na propriedade **$constants** do seu **$ctrl**.
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/zf8gqh0d/313/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/zf8gqh0d/313/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/13/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/276/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/75/)
 
 # Funções
 
@@ -163,8 +182,11 @@ Na declaração do componente bastariamos passar a função por parâmetro, obse
 ``` HTML
 <my-component on-button-click="$ctrl.createAlertTest"></my-component>
 ```
-
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/x3myhc85/17/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/x3myhc85/17/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/16/)
+* [React](http://jsfiddle.net/mateusmiranda/td4v7qqd/299/)
+* [Angular]()
 
 # Bindings
 Bindings são parâmetros informados à um componente, são utilizados quando quiser que o componente **mantenha a referência** do parâmetro, ou seja, toda alteração de valor feita pelo componente será refletido no contexto do parâmetro, assim como toda alteração feita no valor do parâmetro será refletida no componente.
@@ -199,4 +221,8 @@ Quando chamar o componente no código `HTML`, apenas será necessário informar 
 <my-component name="$ctrl.person.name"></my-component>
 ```
 
-Se quiser dar uma olhada, esse exemplo está no [JSFiddle](https://jsfiddle.net/jcanabarro/1kbLruyq/175/)
+Disponibilizamos o exemplo em diferentes ambientes.
+* [CapivaraJS](https://jsfiddle.net/jcanabarro/1kbLruyq/175/)
+* [VueJS](http://jsfiddle.net/jcanabarro/ygznj9mt/18/)
+* [React](http://jsfiddle.net/jcanabarro/td4v7qqd/280/)
+* [Angular](https://jsfiddle.net/t0b8xxfj/82/)
