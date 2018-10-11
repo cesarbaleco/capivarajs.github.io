@@ -47,7 +47,7 @@ Vale lembrar que o objeto de configuração `tag` é a Tag HTML que o componente
 
 ## Template
 
-Essa propriedade é responsável por conter todo código `HTML` presente no seu componente, é ela que será substituída no lugar da chamada do componente, não existe tamanho definido em questão de elementos `HTML` que ela suporta, apenas ressaltar que para facilitar a escrita do código, sempre que um componente possui mais de uma linha, utilizar ao invés de `aspas simples` para demarcar o código, deve ser utilizado `Crase`.
+Essa propriedade é responsável por conter todo código `HTML` presente no seu componente, é ela que será substituída no lugar da chamada do componente, não existe tamanho definido em questão de elementos `HTML` que ela suporta, apenas ressaltar que para facilitar a escrita do código, sempre que um componente possui mais de uma linha, utilizar ao invés de `aspas simples` para demarcar o código, deve ser utilizado `Crase`, fazendo com que a legibilidade do código se torne maior, já que este modelo suporta múltiplas linhas mesmo contendo quebra de linha.
 
 ```js
 @Component({
