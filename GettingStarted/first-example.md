@@ -96,10 +96,9 @@ const {Component, Controller, OnInit} = capivara.core;
   template: `
     <p cp-if="$ctrl.isVisible">[[$ctrl.text]]</p>
     <p cp-else>[[$ctrl.otherText]]</p>
-    <button cp-click="$ctrl.Visibility()">Click!</button>
+    <button cp-click="$ctrl.visibility()">Click!</button>
     `
 })
-
 class ThirdExample extends Controller implements OnInit{
   
   $onInit(){
@@ -108,9 +107,10 @@ class ThirdExample extends Controller implements OnInit{
     this.isVisible = true;
    }
 
-   Visibility = function(){
+   visibility = function(){
      this.isVisible = !this.isVisible;
    }
+   
 }
 ```
 O que podemos observar com este exemplo:
