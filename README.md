@@ -17,7 +17,7 @@
   CapivaraJS
 </h2>
 <blockquote>
-  <p>Um compilador para Web Components.</p>
+  <p>Um compilador para Web Components</p>
 </blockquote>
 
 
@@ -38,7 +38,7 @@ Acesse nosso [tutorial](GettingStarted/quickstart) e aprenda super rápido a uti
 ## Seja um Contribuidor do CapivaraJS
 
 - Faça um Fork!
-- Crie a sua branch com nova funcionalidade: `git checkout -b my-new-feature`
+- Crie uma branch com nova funcionalidade: `git checkout -b my-new-feature`
 - Faça um commit da nova funcionalidade: `git commit -am 'Add some feature'`
 - Faça um push da branch: `git push origin my-new-feature`
 - Submeta o pull request
